@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode: Clean, Professional, Data-Viz Inspired */
+    --background: 210 40% 98%;
+    /* Slate-50 */
+    --foreground: 222 47% 11%;
+    /* Slate-900 */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 221 83% 53%;
+    /* Blue-600 */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Mode: "The Void" - Deep Navy & Neon Accents */
+    --background: 222 47% 11%;
+    /* Slate-900 */
+    --foreground: 210 40% 98%;
+    /* Slate-50 */
+    --card: 217 33% 17%;
+    /* Slate-800 */
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 262 83% 58%;
+    /* Purple-500 (Neon Data feel) */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 262 83% 58%;
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  .dark body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    min-height: 100vh;
+  }
+}
+
+.h1 {
+  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[2px] font-bold font-heading;
+}
+
+.h2 {
+  @apply text-4xl font-bold font-heading;
+}
+
+.h3 {
+  @apply text-3xl font-bold font-heading;
+}
+
+.h4 {
+  @apply text-[22px] font-semibold font-heading;
+}
+
+.subtitle {
+  @apply text-muted-foreground text-lg mb-8 font-light;
+}
+
+.section-title {
+  @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3 before:bg-dots_light before:dark:bg-dots_dark before:bg-no-repeat before:bg-center before:w-[24px] before:h-[24px] font-heading;
+}
+
+.badge {
+  @apply z-10 w-[200px] h-[68px] bg-white dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-[10px] flex items-center gap-x-4;
+}
+
+.swiper-horizontal>.section-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  @apply bg-primary;
+}
+
+/* Custom Rhombus Pagination */
+.swiper-pagination-bullet {
+  @apply rounded-none w-2 h-2 transition-all duration-300 !important;
+  transform: rotate(45deg);
+}
+
+.swiper-pagination-bullet-active {
+  @apply w-2.5 h-2.5 !important;
+}
+
+@layer utilities {
+  .animate-shine {
+    background-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.2) 25%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shine 3s infinite linear;
+  }
+}
+
+@keyframes shine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 dark:bg-slate-900/40 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+}
