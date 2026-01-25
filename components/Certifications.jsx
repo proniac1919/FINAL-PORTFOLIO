@@ -23,7 +23,7 @@ const certificationsData = [
         image: "/about/salesforce-cert.png",
         description: "Validates foundational knowledge of AI across Salesforce's products and services.",
         skills: ["Artificial Intelligence", "Salesforce", "Generative AI"],
-        credentialLink: "https://media.licdn.com/dms/document/media/v2/D561FAQEqwWMsRPpaPw/feedshare-document-pdf-analyzed/feedshare-document-pdf-analyzed/0/1729600153994?e=1767225600&v=beta&t=XXMkpNyKuNlnISZ9_qoMkp1KdOkYNZ9P5O2V6y_IDCo"
+        credentialLink: "https://drive.google.com/file/d/17px2aCmgOVM3k6l1mm_N8iiPxyGH8SmH/view?usp=sharing"
     },
     {
         title: "Google Data Analytics",
