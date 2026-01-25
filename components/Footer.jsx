@@ -9,7 +9,7 @@ const Footer = () => {
             iconsStyles='text-primary dark:text-white/80 text-[26px] hover:text-black dark:hover:text-primary transition-all hover:-translate-y-1 duration-300'
           />
           <div className='text-muted-foreground/80 font-light text-sm tracking-wide'>
-            Copyright &copy; 2025 Abhishek Das. All rights reserved.
+            Copyright &copy; 2026 Abhishek Das. All rights reserved.
           </div>
         </div>
       </div>
